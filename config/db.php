@@ -1,7 +1,7 @@
 <?php
-$host = '';
-$dbname = '';
-$username = '';
+$host = 'localhost';
+$dbname = 'game';
+$username = 'root';
 $password = '';
 
 
