@@ -8,7 +8,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     try {
-        $stmt = $db->prepare("DELETE FROM characters WHERE id = :id");
+        $stmt = $db->prepare("DELETE FROM enemies WHERE id = :id");
         $stmt->bindParam(':id', $_POST['id']);
         if ($stmt->execute()) {
             header("Location: create_enemy.php");

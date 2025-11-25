@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <label for="effectInput">Efecto:</label>
         <input type="number" name="effect" id="effectInput" value="0">
 
-        <label for="imgInput">Imagen (URL o nombre archivo):</label>
+        <label for="imgInput">Imagen:</label>
         <input type="text" name="img" id="imgInput">
 
         <button type="submit">Crear item</button>
