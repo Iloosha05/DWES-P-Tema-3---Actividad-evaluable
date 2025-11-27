@@ -17,6 +17,7 @@ $items = $itemModel->getAll();
 <body>
     <h1>Menu: </h1>
     <?php include('../partials/_menu.php') ?>
+    <a href="/views/items/create_item.php">Crear un item</a></li>
     <h1>Ítems creados:</h1>
     <table>
         <thead>
@@ -32,7 +33,7 @@ $items = $itemModel->getAll();
         <tbody>
             <?php foreach ($items as $item) : ?>
                 <tr>
-                    <td>img</td>
+                    <td><?= $item['img'] ?></td>
                     <td><?= $item['name'] ?></td>
                     <td><?= $item['description'] ?></td>
                     <td><?= $item['type'] ?></td>

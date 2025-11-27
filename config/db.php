@@ -1,6 +1,6 @@
 <?php
 $host = 'localhost';
-$dbname = 'game';
+$dbname = 'tarea3';
 $username = 'root';
 $password = '';
 

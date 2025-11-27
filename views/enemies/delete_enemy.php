@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt = $db->prepare("DELETE FROM enemies WHERE id = :id");
         $stmt->bindParam(':id', $_POST['id']);
         if ($stmt->execute()) {
-            header("Location: create_enemy.php");
+            header("Location: list_enemy.php");
             exit;
         }
     } catch (PDOException $e) {

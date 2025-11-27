@@ -23,6 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           ->setImg($_POST['img']);
 
     if ($enemy->save()) {
+        header('Location: list_enemy.php');
         echo "Enemigo guardado con éxito";
     }
 }
@@ -67,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <button type="submit">Crear enemigo</button>
     </form>
-
+    
     <h1>Enemigos creados:</h1>
     <table>
         <thead>
@@ -92,7 +93,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <td><?= $enemy['health'] ?></td>
                     <td><?= $enemy['strength'] ?></td>
                     <td><?= $enemy['defense'] ?></td>
-
                     <td>
                         <form action="edit_enemy.php" method="GET">
                             <input type="hidden" name="id" value="<?= $enemy['id'] ?>">
@@ -103,7 +103,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                             <button type="submit">Borrar</button>
                         </form>
                     </td>
-
                 </tr>
             <?php endforeach; ?>
         </tbody>

@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
          ->setImg($_POST['img']);
 
     if ($item->save()) {
+        header('Location: list_item.php');
         echo "Item guardado con éxito";
     }
 }
@@ -28,17 +29,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Item</title>
 </head>
-
 <body>
     <h1>Menu: </h1>
     <?php include('../partials/_menu.php') ?>
-
     <h1>Crear Item</h1>
     <form action=<?= $_SERVER['PHP_SELF'] ?> method='POST'>
         <label for="nameInput">Nombre:</label>

@@ -17,6 +17,7 @@ $enemies = $enemyModel->getAll();
 <body>
     <h1>Menu: </h1>
     <?php include('../partials/_menu.php') ?>
+    <a href="/views/enemies/create_enemy.php">Crear un enemigo</a>
     <h1>Enemigos creados:</h1>
     <table>
         <thead>
@@ -34,7 +35,7 @@ $enemies = $enemyModel->getAll();
         <tbody>
             <?php foreach ($enemies as $enemy) : ?>
                 <tr>
-                    <td>img</td>
+                    <td><?= $enemy['img'] ?></td>
                     <td><?= $enemy['name'] ?></td>
                     <td><?= $enemy['description'] ?></td>
                     <td><?= $enemy['isBoss'] ? "Sí" : "No" ?></td>
